@@ -26,6 +26,7 @@ export default function ProjectsSection(props: Props) {
                 <a
                     href={socials.find(link => link.includes("github")) || "https://github.com/Maiky1304"}
                     target="_blank"
+                    rel="noreferrer"
                     aria-labelledby="button to github page"
                     className="border border-dark-50 px-3 py-1 rounded-md hover:cursor-pointer"
                 >
