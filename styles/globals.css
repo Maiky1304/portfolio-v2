@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500&family=Reem+Kufi+Fun:wght@400;500;600;700&family=Reem+Kufi+Ink&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply scroll-smooth scrollbar scrollbar-thumb-dark-100 scrollbar-track-dark-400;
+    overflow: unset;
+}
+
+@layer base {
+
+    body {
+        @apply bg-dark text-dark-text;
+    }
+
+}
+
+@layer utilities {
+    .snap {
+        scroll-snap-type: var(--scroll-snap-direction) var(--scroll-snap-constraint);
+    }
+    .snap-y {
+        --scroll-snap-direction: y;
+    }
+    .snap-mandatory {
+        --scroll-snap-constraint: mandatory;
+    }
+    .snap-start {
+        scroll-snap-align: start;
+    }
+}
+
