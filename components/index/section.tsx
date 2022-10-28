@@ -1,15 +1,20 @@
-import {ReactNode} from "react";
+import { ReactNode } from "react";
 
 type Props = {
-    additionalClasses?: string;
-    id: string;
-    children: ReactNode
-}
+  additionalClasses?: string;
+  id: string;
+  children: ReactNode;
+};
 
 export default function Section(props: Props) {
-    return (
-        <section id={props.id} className={`h-screen container pt-40 snap-start${props.additionalClasses ? ` ${props.additionalClasses}` : ""}`}>
-            {props.children}
-        </section>
-    )
+  return (
+    <section
+      id={props.id}
+      className={`container h-screen flex flex-col justify-center pt-32 snap-start${
+        props.additionalClasses ? ` ${props.additionalClasses}` : ""
+      }`}
+    >
+      {props.children}
+    </section>
+  );
 }
